@@ -1,0 +1,19 @@
+.header {
+    grid-area: h;
+    color:black;
+    padding:10px;
+    background-color: #19456b;
+    display: flex;
+    justify-content: space-between;
+}
+.logo img{
+    width:60px;
+    height:50px;
+}
+.search input{
+    padding:5px 10px;
+    border-radius: 4px;
+    background-color: none;
+    color:black;
+    outline: none;
+}

@@ -1,0 +1,19 @@
+.items{
+    grid-area: n;
+    background-color:#19456b;
+    line-height: 1.4;
+    padding:20px 10px;
+    color:black;
+    height: 100%;
+}
+.item {
+}
+.item a{
+    text-decoration: none;
+    font-size: 22px;
+color:black;
+    font-weight: 400;
+}
+.item .activ{
+    color:gold;
+}
