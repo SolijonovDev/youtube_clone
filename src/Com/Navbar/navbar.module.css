@@ -6,12 +6,12 @@
     color:black;
     height: 100%;
 }
-.item {
-}
 .item a{
     text-decoration: none;
+    padding:5px 0 10px;
     font-size: 22px;
-color:black;
+    display: block;
+    color:black;
     font-weight: 400;
 }
 .item .activ{

@@ -1,5 +1,5 @@
 .App{
-  width:1000px;
+ width:1200px;
   margin:0 auto;
   font-size: 14px;
   display: grid;
@@ -9,6 +9,9 @@
 }
  .app-wrapper {
    grid-area: s;
+   max-width: 1000px;
+   height: auto;
    background-color:#374045;
+   position:relative;
    padding:15px;
  }
