@@ -2,7 +2,7 @@ import React from 'react';
 import s from './header.module.css';
 import logo from './../../images/youtube.png';
 
-const Header = (props) => {
+const Header = () => {
     return (
         <div className={s.header}>
             <div className={s.logo}>

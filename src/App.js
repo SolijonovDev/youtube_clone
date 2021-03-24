@@ -6,7 +6,8 @@ import Navbar from './Com/Navbar/Navbar';
 import Trendy from './Com/Trendy/Trendy';
 import Podpiska from './Com/Podpiska/Podpiska';
 import Tarix from './Com/Tarix/Istoriya';
-import Videos from './Com/AsosiyOyna/Videos';
+import WatchVideo from './Com/WatchVideo/WatchVideo';
+import VideosContainer from './Com/AsosiyOyna/VideosContainer';
 
 const  App= ()=> {
   return (
@@ -14,10 +15,11 @@ const  App= ()=> {
        <Header/>
        <Navbar/>
        <div className='app-wrapper'>
-       <Route path='/asosiy' render={()=><Videos/>}/>
-         <Route path='/trendy' render={()=>Trendy}/>
-         <Route path='/podpiska' render={()=>Podpiska}/>
-         <Route path='/tarix' render={()=>Tarix}/>
+         <Route path='/videos' render={()=><VideosContainer/>}/>
+         <Route path='/trendy' render={()=><Trendy/>}/>
+         <Route path='/podpiska' render={()=><Podpiska />}/>
+         <Route path='/tarix' render={()=><Tarix />}/>
+         <Route path='/watch/:videoId?' render={()=><WatchVideo/> }/>
        </div>
     </div>
   );

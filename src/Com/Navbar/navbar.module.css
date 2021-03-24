@@ -8,12 +8,14 @@
 }
 .item a{
     text-decoration: none;
-    padding:5px 0 10px;
+    padding:5px 10px;
     font-size: 22px;
     display: block;
     color:black;
     font-weight: 400;
+   
 }
 .item .activ{
     color:gold;
+    background-color: rgba(100, 100,100, .4);
 }

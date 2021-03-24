@@ -2,11 +2,11 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import s from './navbar.module.css';
 
-const Navbar=(props)=>{
+const Navbar=()=>{
     return (
         <div className={s.items}>
             <div className={s.item} >
-                <NavLink to='/asosiy' activeClassName={s.activ}>Asosiy</NavLink>
+                <NavLink to='/videos' activeClassName={s.activ}>Asosiy</NavLink>
             </div>
             <div className={s.item}>
                 <NavLink to='/trendy' activeClassName={s.activ}>Trendda</NavLink>

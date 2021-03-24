@@ -1,12 +1,25 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Videos from './video/Videos';
+import { setVideoPlay } from '../../Redux/videos_reducer';
+import Video from './video/Video';
+import s from './videos.module.css';
 
-const mapStateToProps=(state)=>{
-    debugger;
+
+
+const VideosContainer=(props)=>{
+    let v=props.videos.map(el=><Video video={el} setVideoPlay={props.setVideoPlay}/>)
+    return (
+        <div className={s.videos}>
+       {v}
+        </div>
+    )
+}
+const maps=(state)=>{
     return {
-       videos:state.users.users
+        videos:state.videos.videos
     }
 }
-const VideosContainer= connect(mapStateToProps,{})(Videos);
- export default  VideosContainer;
+
+
+
+ export default  connect(maps,{setVideoPlay})(VideosContainer);

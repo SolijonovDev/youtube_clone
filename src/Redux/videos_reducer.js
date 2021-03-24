@@ -1,13 +1,8 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { setVideos } from '../../Redux/video_reducer';
-import Video from './video/Video';
-import s from './videos.module.css';
-
-
-
-const Videos=(props)=>{
-    const obyekts=[
+const SET_VIDEOS='SET_VIDEOS';
+const VIDEO_PLAY='VIDEO_PLAY';
+const initialState = {
+    videoplay:null,
+    videos: [
         {
             id: 1,
             photo:'',
@@ -79,27 +74,20 @@ const Videos=(props)=>{
             status: 'css za 1 chas',
         },
     ]
-     if(props.videos.length==0){
-         props.set(obyekts);
-     }
-    
-    let v=props.videos.map(el=><Video video={el}/>)
-    return (
-        <div className={s.videos}>
-       {v}
-        </div>
-    )
-}
-const maps=(state)=>{
-    return {
-        videos:state.videos.videos
-    }
-}
-const mapd=(dispatch)=>{
-    return {
-        set:(v)=>dispatch(setVideos(v))
-    }
 }
 
-const VideosContainer=connect(maps,mapd)(Videos)
- export default  VideosContainer;
+
+const videosReducer = (state = initialState, action) => {
+    switch (action.type) {
+        case SET_VIDEOS:
+            return { ...state,videos:[...action.videos] }
+    
+    case VIDEO_PLAY:
+        return {...state,videoplay:{...action.video} } 
+    default:
+        return state;
+}
+}
+export default videosReducer;
+export const setVideoPlay=(video)=>({type:VIDEO_PLAY,video});
+export const setVideos=(videos)=> ({type:SET_VIDEOS, videos})
