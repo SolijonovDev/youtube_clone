@@ -1,18 +1,33 @@
 .watchVideo{
     display: grid;
     grid-template-areas:  'w r';
-    grid-template-columns: 7fr 2fr;
-    height: auto;
+    grid-template-columns: 3fr 2fr;
     width:100%;
     height: 100%;
     margin-top:0;
 }
 .watch {
     grid-area: w;
-    padding:10px;
 }
 .rec{
-    padding:10px;
     grid-area: r;
-
+}
+.watch,.rec{
+    padding: 0;
+}
+@media screen and (min-width:300px) and (max-width:400px){
+    .watchVideo{
+        grid-template-areas:  'w w' 'r r';
+    }
+}
+@media screen and (min-width:400px) and (max-width:900px){
+    .watchVideo{
+        grid-template-areas:  'w w' 'r r';
+    }
+}
+    
+@media screen and (min-width:600px) and (max-width:900px){
+    .watchVideo{
+        grid-template-areas:  'w w' 'r r';
+    }
 }

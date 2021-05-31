@@ -1,7 +1,13 @@
 .videos{
     position: relative;
-    min-height: 800px;
+    min-height:100vh;
     width:100%;
     position: relative;
     margin-right: 0 -2%;
 }
+@media screen and (min-width:300px) and (max-width:400px){
+    .videos{
+        margin: 0 0 100px;
+    }
+}
+

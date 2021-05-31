@@ -1,17 +1,35 @@
 .items{
     grid-area: n;
     background-color:black;
-    color:#fff;
     line-height: 1.4;
-    padding:20px 10px;
-    color:black;
+    padding:15px 10px;
+    box-sizing: border-box;
     height: 100%;
     position: fixed;
-    top:100px;
-    width: 100%;
+    top:45px;
+    color:red;
+    margin-right: 5px;
+    width: 200px;
+}
+
+.it{
+    grid-area: n;
+    background-color:black;
+    line-height: 1.4;
+    padding:15px 10px;
+    height: 100%;
+    position: fixed;
+    box-sizing: border-box;
+    top:45px;
+    margin-right: 5px;
+    width:55px;
+}
+.it span{
+    display: none;
 }
 .item{
    margin-bottom: 20px;
+   width: auto;
 }
 .item a{
     text-decoration: none;
@@ -27,9 +45,81 @@
   width: 30px;
   height: auto;
   padding-right: 15px;
-  background-color: none;
 }
 .item .activ{
+    width: 80%;
     color:gold;
     background-color: rgba(100, 100,100, .4);
+}
+ 
+@media screen and (min-width:300px) and (max-width:400px){
+    .items,.it{
+        padding:5px 15px;
+        width: 100vw;
+        top:90vh;
+        z-index: 5;
+        display: flex;
+        justify-content: space-between;
+    }
+    .items span,.it span{
+        display: none;
+    }
+    .item{
+       margin-bottom:5px;   
+       width: 40px;
+       text-align: center;
+    }
+    .item a{
+        padding:5px;  
+    }
+    .item a img{
+      width: 20px;
+    }
+    .item .activ{
+        width: 20px;
+    }
+}
+
+
+
+@media screen and (min-width:400px) and (max-width:600px){
+    .items{
+        padding:4px;
+        width:120px;
+        line-height: 1.2;
+    }
+    
+    .it{
+        padding:4px;
+        top:45px;
+    }
+    .item a{
+        padding:5px;
+        font-size: 12px;
+    }
+    .item a img{
+      width: 25px;
+      padding-right: 10px;
+    }
+}
+
+
+@media screen and (min-width:600px) and (max-width:900px){
+    .items{
+        padding:8px;
+        width:150px;
+        line-height: 1.4;
+    }
+    .it{
+        padding:8px;
+        top:45px;
+    }
+    .item a{
+        padding:10px;
+        font-size: 16px;
+    }
+    .item a img{
+      width: 30px;
+      padding-right: 10px;
+    }
 }

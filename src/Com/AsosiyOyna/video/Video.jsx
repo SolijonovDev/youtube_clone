@@ -5,21 +5,22 @@ import { NavLink } from 'react-router-dom';
 
 
 
-const Video=(props)=>{
+const Video=({video})=>{
+    let v=video;
     return ( 
         <div className={s.video}>
             <div className={s.top}>
-                <NavLink to={'watch/' + props.video.id} >
-                    <img src={props.video.src ? props.video.src : html} />
+                <NavLink to={'watch/' + v.id} >
+                    <img src={v.src || html} />
                 </NavLink>
             </div>
             <div className={s.bottom}>
                 <div className={s.left}>
-                    <img src={props.video.photo ? props.video.photo : html} />
+                    <img src={v.photo || html} />
                 </div>
                 <div className={s.right}>
-                    <h3>{props.video.name}</h3>
-                    <p>{props.video.status}</p>
+                    <h3>{v.name}</h3>
+                    <p>{v.status}</p>
                 </div>
             </div>
         </div >
@@ -28,4 +29,3 @@ const Video=(props)=>{
 
 
 export default Video;
-//<NavLink to={`'/watch/'+${!props? props.video.id : null}`} />

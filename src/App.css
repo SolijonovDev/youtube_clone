@@ -2,19 +2,50 @@
   width:100%;
   box-sizing: border-box;
   background-color:black;
-  color:#fff;
   margin:0 auto;
   font-size: 14px;
   display: grid;
   grid-template-areas: 'h h' 'n s';
-  grid-template-columns: 250px 1fr;
-  grid-template-rows: 70px 1fr;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 45px 1fr;
+  padding:10px;
+}
+.Ap{
+  width:100%;
+  box-sizing: border-box;
+  background-color:black;
+  margin:0 auto;
+  font-size: 14px;
+  display: grid;
+  grid-template-areas: 'h h' 'n s';
+  grid-template-columns: 55px 1fr;
+  grid-template-rows: 45px 1fr;
   padding:10px;
 }
  .app-wrapper {
    grid-area: s;
    box-sizing: border-box;
-   background-color:#374045;
    position:relative;
+   background-color:black;
    padding:15px;
  }
+
+ @media screen and (min-width:300px) and (max-width:400px){
+   .App,.Ap{
+     grid-template-columns: 0 1fr;
+     padding:5px;
+   }
+   .app-wrapper{
+     padding:0;
+   }
+ }
+ @media screen and (min-width:400px) and (max-width:600px){
+  .App{
+    grid-template-columns: 120px 1fr;
+  }
+}
+@media screen and (min-width:600px) and (max-width:900px){
+  .App{
+    grid-template-columns: 150px 1fr;
+  }
+}

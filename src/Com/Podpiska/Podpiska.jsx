@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import s from './podpiska.module.css';
 import Pvideo from './Pvideo/Pvideo';
 
-const Podpiska =(props)=>{
-    let video=props.videos.map(s=><Pvideo video={s}/>);
+const Podpiska =({videos})=>{
+    let video=videos.map(s=><Pvideo video={s}/>);
     return (
         <div className={s.podpiska}>
             {video}

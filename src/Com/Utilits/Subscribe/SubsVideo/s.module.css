@@ -1,0 +1,22 @@
+.inner{
+    width:100%;
+    min-height: 80px;
+    display: flex;
+    align-items: top;
+    border-top: 2px solid rgba(2, 4, 5,.5);
+    text-decoration: none;
+    color:#fff;
+}
+
+.img{
+    width: 80px;
+    margin-top: 15px;
+    text-align: center;
+}
+.text h3{
+    margin-top: 15px;
+}
+.text{
+    width: 200px;
+    text-align: left;
+}

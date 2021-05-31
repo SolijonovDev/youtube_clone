@@ -2,9 +2,9 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import s from './navbar.module.css';
 
-const Navbar=()=>{
+const Navbar=({nav})=>{
     return (
-        <div className={s.items}>
+        <div className={nav?s.items:s.it} >
             <div className={s.item} >
                 <NavLink to='/videos' activeClassName={s.activ}>
                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMwcnzPicmGBgg90rpqE1sI7gYs1blq2-yxQ&usqp=CAU" />
@@ -20,7 +20,7 @@ const Navbar=()=>{
             <div className={s.item}>
                 <NavLink to='/podpiska' activeClassName={s.activ}>
                     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAdVBMVEX///8AAADPz89hYWHMzMz09PSWlpZTU1P6+vrT09NaWlr5+fkwMDDv7+/c3NyLi4tLS0s7OzuoqKi1tbXl5eVxcXE8PDwiIiKvr68pKSm+vr5DQ0OFhYV3d3ff398qKiqfn58SEhIYGBhnZ2eampp/f3/Dw8N+7wEzAAADbklEQVR4nO2di5KaQBBFOyoKKqAYo9FE12TX///ETNVWElOlm3k03T14zwcwfWqhGRr2SgQAAAAAAAAAAICnphnJ0ogbzj7JMhM3HAsbjmEIQxjCEIYwhCEMYQhDGMIQhiYN58KGc3HD/VSWvbghAAAAAAAAAAAAMmQ/H9tjzjnYmAqPnfyYwhCGMFQHhjCEoT4whCEM9YEhDGGoDwxDWBQWWTAaAgAAAAAAAAAAz8CpmtikOjHYVe1ZexzzIcu2StEru6/aBh6cuzJW8GD7z/eX8yFOcKtdeADbCL9iqV11EMsiVLDOS9Ap1mGC5VG74mCOYf0mp2vwN0HX4kG72iiuAefoTrvYKHb+52mnXWsknbfhWrvUSNa+gpV2pdH47lFb7UKjaT0NV9qFRrPyEyy160zAr5vW2mUm4Ld1a7TLTMAvP3KkXWYCIxjC0DwwhKF9xA2P0mnD4oYzmsgOfBQMiTaSc3MVQ1q88B3wf+gYOsdvfIf8GC1Dos9C40k9Q/fEIhJhp2lINBF4UaBrSHTofQ6rbUjly4Xv4PdQNyQq+h3kGTAkqvtsqyYMiU79tVUjhkTXvkayZgzdbvXCt8oNhgyJetmtmjLspa3aMnS71e98S71jzdC1VeYhgD1DYh4CWDR0bZVxR27TkEq+7waMGjpHrrZq1tDtVnnaqmFDpiGAaUPXVtO/cjFuyDAEMG9I1P1IWjADw8Tdag6GaUOAPAzdjjz6B1ByMTz9HLZhys0/B8PFwDtNmTjbMG+Y/CBl3HDyJXlB04YNxwzVsCHTUMqsYfHGtKBVw1e2BW0abvjWM2l4TW+gN9gzrJhfQlkzjH+GeIQtw5qrgd5gyXDRS1KhIcP9hW+VG8wY9vZhjRFD7gZ6gwnDU5+/QmvAkOn9xCPUDYu+o161DbsL36Hvo2vI+a73EZqGI5EYCj1DmS+E9Qz5v5t5hI5hKfalvo5h6ow3DHHDOW1kIzbEDdfSMTf47zwY2geGMLQPDN8ZfvLH8NNbhp/AM/wUpSdIwhp+mtnwE+meIFWQMk2G9Bekq3axUQSkez5BQiuVrF9IiLAOTPXOLAo6Jgy6yOuWsQ4WdCdqTtfiNi54/prLTWMX1EX/ocvhVF0G3OjvULW2nzRWbRX9ywh/KOtmZJOmTrcDAAAAAAAAAABAJvwCeJ58WL2IYUgAAAAASUVORK5CYII=" alt="" />
-                    Podpiska
+                   <span> Podpiska</span>
                     </NavLink>
             </div>
             <div className={s.item}>

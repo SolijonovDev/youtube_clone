@@ -1,5 +1,3 @@
-// const SET_VIDEOS='SET_VIDEOS';
-// const VIDEO_PLAY='VIDEO_PLAY';
 
 const initialState = {
     videoplay:null,

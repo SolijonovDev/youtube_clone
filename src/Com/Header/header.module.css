@@ -1,71 +1,208 @@
 .header {
     grid-area: h;
     color:#fff;
-    padding:20px;
+    padding:5px 0;
     background-color:black;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
     width: 100%;
+    box-sizing: border-box;
+   height: 45px;
     top:0;
     z-index: 10;
 }
-.logo img{
+.logos{
+    display: flex;
+    width: 10%;
+    align-items: center;
+}
+.logos img{
     width:100px;
-    height:70px;
-    margin-top: -15px;
 }
 .search{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 35%;
 }
 
 .srch{
-width: 500px;
-border:1px solid rgba(141, 160, 141, .5);
-height: 40px;
-color:red;
-outline: none;
-padding:5px 10px;
-border-radius: 4px;
-background-color: none;
-outline: none;
+    border:1px solid rgba(141, 160, 141, .5);
+    padding:6px;
+    outline: none;
+    width: 80%;
+    color:red;
+    border-radius: 4px;
+    background-color: none;
+    outline: none;
 }
 .search .srch:focus{
     border:1px solid blue;
     box-shadow: 2px 4px 12px rgba(7, 52, 110, .8);
 }
 .search .img{
-    width: 100px;   
-    height: 38px;
+    height: 25px;
+    width: 20%;  
+    padding: 1px;  
+    margin-top: 0px;
     border:1px solid rgba(1, 2,1, .5);
     text-align: center;
 }
 .search .img img{
-    width: 35px;
+    width: 15px;
     padding: 3px 0;
 }
 .search .img:active{
     border:1px solid blue;
 }
-.search .btn img{
-    width: 35px;
-    height:40px;
-}
+
 .search .btn:active{
     border:1px solid blue;
 }
 .profile {
-    width: 200px;
+    width: 15%;
+    text-align: center;
+    position: relative;
     height: auto;
-   text-align: center;
 }
 .profile img{
-    width: 40px;
+    width: 30px;
     margin-right: 20px;
-    border-radius: 40px;
+    border-radius: 30px;
     height: auto;
     text-align: right;
+    border:2px solid yellow;
+}
+.menu{
+    width: 30px;
+    height: 25px;
+    position: relative;
+    margin-top: -5px;
+}
+.btn{
+    content: '';
+    display: block;
+    width: 100%;
+    top:40%;
+    height: 2px;
+    background-color:red;
+    outline: none;
+    border:1px solid #fff;
+    position: relative;
+}
+.menu::before{
+    content: '';
+    background-color: blue;
+    width: 100%;
+    display: block;
+    position:absolute;
+    z-index: 4;
+    height: 2px;
+    top:0%;
+    left:0;
+}
+.menu::after{
+    content: '';
+    background-color:green;
+    width: 100%;
+    display: block;
+    position:absolute;
+    z-index: 4;
+    height: 2px;
+    top:90%;
+    left:0;
+}
+
+.profilepage{
+    display: none;
+}
+.prof{
+    position: absolute;
+    background-color:cornflowerblue;
+    top:0;
+    display: block;
+    right:70%;
+    width: 250px;
+    min-height: 300px;
+}
+.subscribepage{
+  position: absolute;
+  background-color: blueviolet; 
+  top:0;
+  right:85%;
+  display: block;
+  width: 400px;
+  min-height: 400px;
+}
+.subs{
+    display: none;
+}
+
+@media screen and (min-width: 300px) {
+    .logos{
+        width: 30%;
+    }
+    .search{
+      width: 40%;
+  }
+  .srch{
+      width: 100px;
+  }
+  .profile {
+    width: 30%;
+}
+.profile img{
+    width: 24px;
+    margin-right: 5px;
+    border-radius: 30px;
+}
+.profilepage{
+    display: none;
+}
+.prof{
+    right:75%;
+    width: 100px;
+}
+.subscribepage{
+  right:90%;
+  width: 150px;
+ }
+}
+
+@media screen and (min-width: 400px) {
+    .logos{
+        width: 25%;
+    }
+    .search{
+      width: 50%;
+  }
+  .srch{
+      width: 80%;
+  }
+.prof{
+    right:65%;
+    width: 250px;
+}
+.subscribepage{
+  right:80%;
+  width: 300px;
+ }
+}
+
+@media screen and (min-width:300px) and (max-width:400px){
+.btn{
+    display: none;
+}
+.menu:after{
+    display: none;
+}
+.menu::before{
+display: none;
+}
+.logos img{
+    margin-left: -25px;
+}
+
 }

@@ -3,8 +3,8 @@ import s from './pvideo.module.css';
 import photo from './../../../images/mern.jpg';
 import { NavLink } from 'react-router-dom';
 
-const Pvideo = (props) => {
-    let v=props.video;
+const Pvideo = ({video}) => {
+    let v=video;
     return (
         <div className={s.video}>
             <NavLink to={'/watch/'+v.id} className={s.inner}>

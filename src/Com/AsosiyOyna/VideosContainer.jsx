@@ -6,8 +6,8 @@ import s from './videos.module.css';
 
 
 
-const VideosContainer=(props)=>{
-    let v=props.videos.map(el=><Video video={el} setVideoPlay={props.setVideoPlay}/>)
+const VideosContainer=({videos})=>{
+    let v=videos.map(el=><Video video={el}/>)
     return (
         <div className={s.videos}>
        {v}
@@ -22,4 +22,4 @@ const maps=(state)=>{
 
 
 
- export default  connect(maps,{setVideoPlay})(VideosContainer);
+ export default  connect(maps)(VideosContainer);

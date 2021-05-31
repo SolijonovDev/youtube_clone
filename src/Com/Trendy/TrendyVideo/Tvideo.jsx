@@ -3,8 +3,8 @@ import s from './trendyv.module.css';
 import photo from './../../../images/javascript.png';
 import { NavLink } from 'react-router-dom';
 
-const Tvideo=(props)=>{
-    let v=props.video;
+const Tvideo=({video})=>{
+    let v=video;
     return (
         <div className={s.video}>
          <NavLink to={'watch/'+v.id} className={s.inner}>
