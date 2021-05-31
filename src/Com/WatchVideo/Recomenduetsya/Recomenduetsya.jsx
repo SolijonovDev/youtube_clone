@@ -3,7 +3,6 @@ import s from './recomenduetsya.module.css';
 
 
 const Recomenduetsya=(props)=>{
-    debugger
     return <div className={s.recom}>
         <p>{props.video.id}</p>
         <p>{props.video.status}</p>

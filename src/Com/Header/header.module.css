@@ -1,20 +1,71 @@
 .header {
     grid-area: h;
-    color:black;
-    padding:10px;
-    background-color: #19456b;
+    color:#fff;
+    padding:20px;
+    background-color:black;
     display: flex;
     justify-content: space-between;
-    height: 80px;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top:0;
+    z-index: 10;
 }
 .logo img{
-    width:60px;
-    height:50px;
+    width:100px;
+    height:70px;
+    margin-top: -15px;
 }
-.search input{
-    padding:5px 10px;
-    border-radius: 4px;
-    background-color: none;
-    color:black;
-    outline: none;
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.srch{
+width: 500px;
+border:1px solid rgba(141, 160, 141, .5);
+height: 40px;
+color:red;
+outline: none;
+padding:5px 10px;
+border-radius: 4px;
+background-color: none;
+outline: none;
+}
+.search .srch:focus{
+    border:1px solid blue;
+    box-shadow: 2px 4px 12px rgba(7, 52, 110, .8);
+}
+.search .img{
+    width: 100px;   
+    height: 38px;
+    border:1px solid rgba(1, 2,1, .5);
+    text-align: center;
+}
+.search .img img{
+    width: 35px;
+    padding: 3px 0;
+}
+.search .img:active{
+    border:1px solid blue;
+}
+.search .btn img{
+    width: 35px;
+    height:40px;
+}
+.search .btn:active{
+    border:1px solid blue;
+}
+.profile {
+    width: 200px;
+    height: auto;
+   text-align: center;
+}
+.profile img{
+    width: 40px;
+    margin-right: 20px;
+    border-radius: 40px;
+    height: auto;
+    text-align: right;
 }

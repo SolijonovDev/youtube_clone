@@ -1,0 +1,14 @@
+.tarix{
+    width: 100%;
+    min-height: 800px;
+    box-sizing: border-box;
+}
+.inner{
+    display: flex;
+}
+.videos{
+    width: 65%;
+}
+.search{
+    width: 35%;
+}

@@ -1,5 +1,5 @@
-const SET_VIDEOS='SET_VIDEOS';
-const VIDEO_PLAY='VIDEO_PLAY';
+// const SET_VIDEOS='SET_VIDEOS';
+// const VIDEO_PLAY='VIDEO_PLAY';
 
 const initialState = {
     videoplay:null,
@@ -78,17 +78,10 @@ const initialState = {
 }
 
 
-const videosReducer = (state = initialState, action) => {
+const podpiskaReducer = (state = initialState, action) => {
     switch (action.type) {
-        case SET_VIDEOS:
-            return { ...state,videos:[...action.videos] }
-    
-    case VIDEO_PLAY:
-        return {...state,videoplay:{...action.video} } 
     default:
         return state;
 }
 }
-export default videosReducer;
-export const setVideoPlay=(video)=>({type:VIDEO_PLAY,video});
-export const setVideos=(videos)=> ({type:SET_VIDEOS, videos})
+export default podpiskaReducer;

@@ -5,7 +5,7 @@ import Header from './Com/Header/Header';
 import Navbar from './Com/Navbar/Navbar';
 import Trendy from './Com/Trendy/Trendy';
 import Podpiska from './Com/Podpiska/Podpiska';
-import Tarix from './Com/Tarix/Istoriya';
+import Tarix from './Com/Tarix/Tarix';
 import WatchVideo from './Com/WatchVideo/WatchVideo';
 import VideosContainer from './Com/AsosiyOyna/VideosContainer';
 

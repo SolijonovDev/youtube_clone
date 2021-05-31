@@ -1,9 +1,23 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import s from './trendy.module.css';
+import Tvideo from './TrendyVideo/Tvideo';
 
-const Trendy =()=>{
+const Trendy = (props) => {
+    let videos=props.videos.map(s=><Tvideo video={s}/>);
     return (
-<div>Trendy</div>
+        <div className={s.trendy}> 
+           {videos}
+        </div>
     )
 }
+const mapStateToProps=(state)=>({
+   videos:state.trendy.videos,
 
-export default Trendy;
+}
+)
+const mapDispatchToProps={
+}
+
+
+export default connect(mapStateToProps,mapDispatchToProps)(Trendy);

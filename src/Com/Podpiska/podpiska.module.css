@@ -1,0 +1,9 @@
+.podpiska{
+    width: 100%;
+    min-height: 800px;
+}
+.podpiska::after{
+    content: '';
+    display: block;
+    clear: both;
+}

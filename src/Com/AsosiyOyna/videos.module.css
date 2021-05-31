@@ -1,5 +1,7 @@
 .videos{
     position: relative;
-    height: auto;
+    min-height: 800px;
     width:100%;
+    position: relative;
+    margin-right: 0 -2%;
 }
