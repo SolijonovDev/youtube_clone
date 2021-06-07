@@ -26,11 +26,11 @@ const Header = ({ setNav, nav }) => {
                 <div className={profile ? s.prof : s.profilepage}>
                     <Profile />
                 </div>
-                <img onClick={() => { setSubs(!subs) }} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2tdzxQaG4wygq6XM-09Kx4x7aoDwb0GpQ2g&usqp=CAU" alt="" srcset="" />
+                <img onClick={() => { setSubs(!subs) }}  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2tdzxQaG4wygq6XM-09Kx4x7aoDwb0GpQ2g&usqp=CAU" alt="" srcset="" />
                 <div className={subs ? s.subscribepage : s.subs}>
                     <Subscribe />
                 </div>
-                <img onClick={() => { setProfile(!profile) }} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMSKaWTKHRQ-wTFPBS_kt8WGASXpkRZMLQKw&usqp=CAU" alt="" srcset="" />
+                <img onClick={() => { setProfile(!profile) }}  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMSKaWTKHRQ-wTFPBS_kt8WGASXpkRZMLQKw&usqp=CAU" alt="" srcset="" />
             </div>
         </div>
 

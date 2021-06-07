@@ -1,4 +1,5 @@
-import { combineReducers, createStore } from 'redux';
+import { applyMiddleware, combineReducers, createStore } from 'redux';
+import thunk from 'redux-thunk';
 import podpiskaReducer from './podpischiki_reducer';
 import subsReducer from './subs_reducer';
 import trendyReducer from './trendy_reducer';
@@ -13,6 +14,6 @@ let reducers = combineReducers({
     subs:subsReducer
 });
 
-let store = createStore(reducers);
+let store = createStore(reducers,applyMiddleware(thunk));
 
 export default store;

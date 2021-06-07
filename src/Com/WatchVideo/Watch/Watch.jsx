@@ -1,6 +1,5 @@
 import React from 'react';
 import s from './watch.module.css';
-import jsphoto from './../../../images/javascript.png';
 import viewsphoto from './../../../images/views.png';
 import likephoto from './../../../images/like.png';
 import dislikephoto from './../../../images/dislike.png';
@@ -11,7 +10,7 @@ const Watch = ({ video }) => {
         <div className={s.watch}>
             <div className={s.innner}>
                 <div className={s.video}>
-                    <img src={v.src || jsphoto} alt="" />
+                    <img src={v.src} />
                 </div>
                 <div className={s.info}>
                     <div className={s.views}>
@@ -42,12 +41,17 @@ const Watch = ({ video }) => {
                         </div>
                     </div>
                     <div className={s.text}>
-
                     </div>
                 </div>
+                <hr />
                 <div className={s.kommentari}>
                     kommentari
+                    <div className={s.send}>
+                    <textarea placeholder="matn kiriting...."></textarea>
+                    <button>Qo'shish</button>
+                    </div>
             </div>
+                <hr />
             </div>
         </div>)
 }

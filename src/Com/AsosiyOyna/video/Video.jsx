@@ -16,10 +16,10 @@ const Video=({video})=>{
             </div>
             <div className={s.bottom}>
                 <div className={s.left}>
-                    <img src={v.photo || html} />
+                    <img src={v.photochannel || html} />
                 </div>
                 <div className={s.right}>
-                    <h3>{v.name}</h3>
+                    <h3>{v.channelName}</h3>
                     <p>{v.status}</p>
                 </div>
             </div>
