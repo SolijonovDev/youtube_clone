@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import s from './trendy.module.css';
 import Tvideo from './TrendyVideo/Tvideo';
-import {trGetVideos} from './../../Redux/trendy_reducer';
+import {trGetVideos} from './../../Redux/actions/trendy_reducer';
 import { NavLink } from 'react-router-dom';
 
 class Trendy extends React.Component {

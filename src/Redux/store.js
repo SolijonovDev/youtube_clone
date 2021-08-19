@@ -1,19 +1,10 @@
-import { applyMiddleware, combineReducers, createStore } from 'redux';
+import { applyMiddleware, createStore } from 'redux';
 import thunk from 'redux-thunk';
-import podpiskaReducer from './podpischiki_reducer';
-import subsReducer from './subs_reducer';
-import trendyReducer from './trendy_reducer';
-import videosReducer from './videos_reducer';
-import watchVideosReducer from './watch_videos_reducer';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
-let reducers = combineReducers({
-    videos: videosReducer,
-    trendy: trendyReducer,
-    podpischiki: podpiskaReducer,
-    watch:watchVideosReducer,
-    subs:subsReducer
-});
+import { reducers } from './reducers';
 
-let store = createStore(reducers,applyMiddleware(thunk));
+
+let store = createStore(reducers,composeWithDevTools(applyMiddleware(thunk)));
 
 export default store;

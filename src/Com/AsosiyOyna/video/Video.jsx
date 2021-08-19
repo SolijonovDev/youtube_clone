@@ -5,8 +5,7 @@ import { NavLink } from 'react-router-dom';
 
 
 
-const Video=({video})=>{
-    let v=video;
+const Video=({video:v})=>{
     return ( 
         <div className={s.video}>
             <div className={s.top}>

@@ -1,4 +1,4 @@
-import { Videos } from "../Baza/Videos";
+import { Videos } from "../../Baza/Videos";
 
 const SUBS_GET_VIDEOS="SUBS_GET_VIDEOS";
 const initialState={

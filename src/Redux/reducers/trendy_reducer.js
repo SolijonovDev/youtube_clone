@@ -1,4 +1,4 @@
-import { Videos } from "../Baza/Videos";
+import { Videos } from "../../Baza/Videos";
 
 const TR_GET_VIDEOS="TR_GET_VIDEOS";
 

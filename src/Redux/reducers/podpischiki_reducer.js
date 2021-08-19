@@ -1,4 +1,4 @@
-import { Videos } from "../Baza/Videos";
+import { Videos } from "../../Baza/Videos";
 
 const PS_GET_VIDEOS="PS_GET_VIDEOS";
 const initialState = {

@@ -1,4 +1,4 @@
-import { getVideoById, Videos } from "../Baza/Videos";
+import { getVideoById, Videos } from "../../Baza/Videos";
 
 const SET_VIDEO='SET_VIDEO';
 const W_GET_VIDEO='W_GET_VIDEO';

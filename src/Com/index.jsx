@@ -1,0 +1,10 @@
+export {default as Tarix} from './Tarix/Tarix'
+export {default as Podpiska} from './Podpiska/Podpiska'
+export {default as Navbar} from './Navbar/Navbar'
+export {default as Header} from './Header/Header'
+export {default as Videos} from './AsosiyOyna/Videos'
+export {default as Trendy} from './Trendy/Trendy'
+export {default as WatchVideo} from './WatchVideo/WatchVideo'
+export {default as Profile} from './Utilits/Profile/Profile'
+export {default as Subscribe} from './Utilits/Subscribe/Subscribe'
+

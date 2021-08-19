@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Profile from '../Utilits/Profile/Profile';
 import Subscribe from '../Utilits/Subscribe/Subscribe';
+import { FaYoutube } from "react-icons/fa";
 import s from './header.module.css';
 
 const Header = ({ setNav, nav }) => {
@@ -13,7 +14,8 @@ const Header = ({ setNav, nav }) => {
                     <button className={s.btn}></button>
                 </div>
                 <div>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHezoWvUAv1IBWAr7jALM91x63IKipQfQSsQ&usqp=CAU" />
+                    <FaYoutube/>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHezoWvUAv1IBWAr7jALM91x63IKipQfQSsQ&usqp=CAU" alt='logo'/>
                 </div>
             </div>
             <div className={s.search}>

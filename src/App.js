@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import { Route, Switch } from 'react-router';
+import { Redirect } from 'react-router-dom';
 import './App.css';
-import Header from './Com/Header/Header';
-import Navbar from './Com/Navbar/Navbar';
-import Trendy from './Com/Trendy/Trendy';
-import Podpiska from './Com/Podpiska/Podpiska';
-import Tarix from './Com/Tarix/Tarix';
-import WatchVideo from './Com/WatchVideo/WatchVideo';
-import VideosContainer from './Com/AsosiyOyna/VideosContainer';
+
+import { Header, Navbar, Podpiska, Tarix, Trendy, Videos, WatchVideo } from './Com';
+
+
 
 const App=()=>{
 
@@ -18,12 +16,12 @@ const App=()=>{
        <Navbar nav={nav}/>
        <div className='app-wrapper'>
          <Switch>
-         <Route path='/videos' render={()=><VideosContainer/>}/>
-         <Route path='/trendy' render={()=><Trendy/>}/>
-         <Route path='/podpiska' render={()=><Podpiska />}/>
-         <Route path='/tarix' render={()=><Tarix />}/>
-         <Route path='/watch/:videoId?' render={()=><WatchVideo setNav={setNav}/> }/>
-         <Route path='/' render={()=><VideosContainer/>}/>
+         <Route exact path='/videos' render={()=><Videos/>}/>
+         <Route exact path='/trendy' render={()=><Trendy/>}/>
+         <Route exact path='/podpiska' render={()=><Podpiska />}/>
+         <Route exact path='/tarix' render={()=><Tarix />}/>
+         <Route exact path='/watch/:videoId?' render={()=><WatchVideo setNav={setNav}/> }/>
+         <Redirect to='/videos'/>
          </Switch>
        </div>
     </div>

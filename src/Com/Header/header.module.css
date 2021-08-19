@@ -17,6 +17,10 @@
     display: flex;
     width: 10%;
     align-items: center;
+
+}
+.logos>div+div{
+    font-size: 50px;
 }
 .logos img{
     width:100px;

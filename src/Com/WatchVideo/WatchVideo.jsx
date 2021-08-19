@@ -4,7 +4,7 @@ import { withRouter } from 'react-router';
 import Recomenduetsya from './Recomenduetsya/Recomenduetsya';
 import Watch from './Watch/Watch';
 import s from './watchVideo.module.css';
-import {watchVideoThunk,watchGetVideosThunk} from './../../Redux/watch_videos_reducer';
+import {watchVideoThunk,watchGetVideosThunk} from './../../Redux/actions/watch_videos_reducer';
 import { compose } from 'redux';
 
 class WatchVideo extends React.Component{

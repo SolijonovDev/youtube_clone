@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import s from './podpiska.module.css';
 import Pvideo from './Pvideo/Pvideo';
-import {psGetVideoThunk} from './../../Redux/podpischiki_reducer';
+import {psGetVideoThunk} from './../../Redux/actions/podpischiki_reducer';
 
 class Podpiska extends React.Component{
  componentDidMount(){
