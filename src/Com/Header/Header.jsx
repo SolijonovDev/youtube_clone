@@ -7,6 +7,7 @@ import s from './header.module.css';
 const Header = ({ setNav, nav }) => {
     let [profile, setProfile] = useState(false);
     let [subs, setSubs] = useState(false);
+
     return (
         <div className={s.header}>
             <div className={s.logos}>

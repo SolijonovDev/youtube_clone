@@ -1,13 +1,12 @@
 import React from 'react';
 import s from './trendyv.module.css';
 import photo from './../../../images/javascript.png';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-const Tvideo=({video})=>{
-    let v=video;
+const Tvideo=({video:v})=>{
     return (
         <div className={s.video}>
-         <NavLink to={'watch/'+v.id} className={s.inner}>
+         <Link to={'watch/'+v.id} className={s.inner}>
           <div className={s.img}>
               <img src={v.src||photo} alt="trendy photo" />
           </div>
@@ -15,7 +14,7 @@ const Tvideo=({video})=>{
               <h2>{v.name}</h2>
               <p>{v.status}</p>
           </div>
-         </NavLink>
+         </Link>
         </div>
     )
 }

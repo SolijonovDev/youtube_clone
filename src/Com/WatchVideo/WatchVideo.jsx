@@ -1,50 +1,42 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { withRouter } from 'react-router';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import Recomenduetsya from './Recomenduetsya/Recomenduetsya';
 import Watch from './Watch/Watch';
 import s from './watchVideo.module.css';
-import {watchVideoThunk,watchGetVideosThunk} from './../../Redux/actions/watch_videos_reducer';
-import { compose } from 'redux';
+import { watchVideoThunk, watchGetVideosThunk } from './../../Redux/actions/watch_videos_reducer';
+import { useParams } from 'react-router-dom';
 
-class WatchVideo extends React.Component{
-    componentDidMount(){
-    this.props.watchVideoThunk(this.props.match.params.videoId);
-    this.props.watchGetVideosThunk();
-    }
-    
-    componentDidUpdate(){
-        this.props.watchVideoThunk(this.props.match.params.videoId);
-    }
-    render(){
-    let vid=this.props.videos.map(el=><Recomenduetsya video={el}/>);
-     this.props.setNav(false);
+const WatchVideo = ({ setNav }) => {
+
+    const dispatch = useDispatch();
+    const { id } = useParams();
+    const { videos, video } = useSelector(state => state.watch);
+
+    useEffect(() => {
+        dispatch(watchGetVideosThunk());
+        dispatch(watchVideoThunk(id))
+    }, [])
+
+
+
+    useEffect(() => {
+        dispatch(watchVideoThunk(id));
+    }, [id])
+
+    let vid = videos.map(el => <Recomenduetsya video={el} />);
+    setNav(false);
+
     return (
         <div className={s.watchVideo}>
             <div className={s.watch}>
-            <Watch video={this.props.video}/>
+                <Watch video={video} />
             </div>
             <div className={s.rec}>
-           {vid}
-           </div>
+                {vid}
+            </div>
         </div>
     )
 }
-}
-const WithWatchVideo=withRouter(WatchVideo);
-
-const mapS=(state)=>{
-    return {
-        videos:state.watch.videos,
-        video:state.watch.video,
-    }
-}
-const mapD={
-    watchVideoThunk,
-    watchGetVideosThunk
-}
 
 
-
-export default  compose(withRouter,
-connect(mapS,mapD))(WithWatchVideo);
+export default WatchVideo;

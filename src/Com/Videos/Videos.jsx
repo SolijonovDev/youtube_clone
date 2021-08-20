@@ -8,7 +8,6 @@ import {videosThunk} from '../../Redux/actions/videos_reducer';
 
 const  Videos=()=>{
     const dispatch=useDispatch();
-
     useEffect(()=>{
       dispatch(videosThunk());
     },[])

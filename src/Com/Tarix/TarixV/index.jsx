@@ -3,8 +3,7 @@ import s from './tarixv.module.css';
 import photo from './../../../images/javascript.png';
 import { NavLink } from 'react-router-dom';
 
-const Tarixv=(props)=>{
-    let v=props.video;
+const Tarixv=({video:v})=>{
     return (
         <div className={s.video}>
          <NavLink to={'watch/'+v.id} className={s.inner}>

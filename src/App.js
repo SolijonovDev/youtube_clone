@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Route, Switch } from 'react-router';
-import { Redirect } from 'react-router-dom';
+import {Route, Switch, Redirect } from 'react-router-dom';
 import './App.css';
 
 import { Header, Navbar, Podpiska, Tarix, Trendy, Videos, WatchVideo } from './Com';
@@ -8,7 +7,6 @@ import { Header, Navbar, Podpiska, Tarix, Trendy, Videos, WatchVideo } from './C
 
 
 const App=()=>{
-
   let [nav,setNav]=useState(true);
   return (
     <div className={nav?"App":"Ap"}>
@@ -20,7 +18,7 @@ const App=()=>{
          <Route exact path='/trendy' render={()=><Trendy/>}/>
          <Route exact path='/podpiska' render={()=><Podpiska />}/>
          <Route exact path='/tarix' render={()=><Tarix />}/>
-         <Route exact path='/watch/:videoId?' render={()=><WatchVideo setNav={setNav}/> }/>
+         <Route exact path='/watch/:id?' render={()=><WatchVideo setNav={setNav}/> }/>
          <Redirect to='/videos'/>
          </Switch>
        </div>

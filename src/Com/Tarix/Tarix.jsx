@@ -1,10 +1,12 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import Search from './Search/Search';
+import { useSelector } from 'react-redux';
+import Search from './Search';
 import s from './tarix.module.css';
-import Tarixv from './TarixV/Tarixv';
+import Tarixv from './TarixV';
 
-const Tarix = ({videos}) => {
+const Tarix = () => {
+    const {videos}=useSelector(state=>state.trendy);
+
     let video=videos.map(s=><Tarixv video={s}/>);
     return (
         <div className={s.tarix}> 
@@ -19,13 +21,7 @@ const Tarix = ({videos}) => {
         </div>
     )
 }
-const mapStateToProps=(state)=>({
-   videos:state.trendy.videos,
-
-}
-)
-const mapDispatchToProps={
-}
 
 
-export default connect(mapStateToProps,mapDispatchToProps)(Tarix);
+
+export default Tarix;

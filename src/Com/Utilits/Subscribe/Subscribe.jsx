@@ -1,9 +1,11 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 import s from './s.module.css';
 import Svideo from './SubsVideo/Svideo';
 
-const Subscribe=({videos})=>{
+const Subscribe=()=>{
+ const {videos}=useSelector(state=>state.subs)
+
     const subs=videos.map(e=><Svideo video={e}/>);
     return (
         <div className={s.subs}>
@@ -13,8 +15,5 @@ const Subscribe=({videos})=>{
     )
 }
 
-const mapStateToProps=(state)=>({
-    videos:state.subs.videos,
-})
 
-export default connect(mapStateToProps)(Subscribe);
+export default Subscribe;

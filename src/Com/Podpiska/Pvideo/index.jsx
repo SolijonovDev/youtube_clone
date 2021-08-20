@@ -1,13 +1,13 @@
 import React from 'react';
 import s from './pvideo.module.css';
 import photo from './../../../images/mern.jpg';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Pvideo = ({video}) => {
     let v=video;
     return (
         <div className={s.video}>
-            <NavLink to={'/watch/'+v.id} className={s.inner}>
+            <Link to={'/watch/'+v.id} className={s.inner}>
                 <div className={s.img}>
                    <img src={v.src||photo} alt="photo" />
                 </div>
@@ -15,7 +15,7 @@ const Pvideo = ({video}) => {
                    <h2>{v.name}</h2>
                    <p>{v.status}</p>
                 </div>
-            </NavLink>
+            </Link>
         </div>
     )
 }

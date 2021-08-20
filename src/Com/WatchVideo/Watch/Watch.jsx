@@ -4,8 +4,8 @@ import viewsphoto from './../../../images/views.png';
 import likephoto from './../../../images/like.png';
 import dislikephoto from './../../../images/dislike.png';
 
-const Watch = ({ video }) => {
-    let v = video;
+const Watch = ({ video:v }) => {
+
     return (
         <div className={s.watch}>
             <div className={s.innner}>
