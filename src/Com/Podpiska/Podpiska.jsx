@@ -6,7 +6,7 @@ import {psGetVideoThunk} from './../../Redux/actions/podpischiki_reducer';
 
 const Podpiska=()=>{
     const dispatch=useDispatch();
-    const {videos}=useSelector(state=>state.podpischiki);
+    const {videos}=useSelector(state=>state.podpiska);
     
     useEffect(()=>{
      dispatch(psGetVideoThunk());

@@ -13,7 +13,7 @@ const Trendy = () => {
    }, [])
    const { videos } = useSelector(state => state.trendy)
 
-   let video = this.props.videos.map(s => <Tvideo video={s} />);
+   let video = videos.map(s => <Tvideo video={s} />);
    return (
       <div className={s.trendy}>
          <div className={s.ikonki}>

@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import Profile from '../Utilits/Profile/Profile';
 import Subscribe from '../Utilits/Subscribe/Subscribe';
-import { FaYoutube } from "react-icons/fa";
+import YouTubeIcon from '@material-ui/icons/YouTube';
+import SearchIcon from '@material-ui/icons/Search';
+import NotificationsIcon from '@material-ui/icons/Notifications';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import MenuIcon from '@material-ui/icons/Menu';
+
 import s from './header.module.css';
 
 const Header = ({ setNav, nav }) => {
@@ -10,33 +15,38 @@ const Header = ({ setNav, nav }) => {
 
     return (
         <div className={s.header}>
-            <div className={s.logos}>
-                <div className={s.menu} onClick={() => { setNav(!nav) }}>
-                    <button className={s.btn}></button>
+            <div className={s.inner}>
+                <div className={s.logos}>
+                    <div className={s.menu} onClick={() => { setNav(!nav) }}>
+                        <MenuIcon color='primary' />
+                    </div>
+                    <div className={s.logo}>
+                        <YouTubeIcon color='error' fontSize='large' />
+                        <span>Youtube</span>
+                    </div>
                 </div>
-                <div>
-                    <FaYoutube/>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHezoWvUAv1IBWAr7jALM91x63IKipQfQSsQ&usqp=CAU" alt='logo'/>
+                <div className={s.search}>
+                    <input className={s.srch} type='search' placeholder='qidirish' />
+                    <span className={s.img}>
+                        <SearchIcon color='primary' />
+                    </span>
                 </div>
-            </div>
-            <div className={s.search}>
-                <input className={s.srch} type='search' placeholder='qidirish' />
-                <span className={s.img}>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdb4r8bEeGHv44ENLSTP1f8Rt3iY7cR3qgSQ&usqp=CAU" />
-                </span>
-            </div>
-            <div className={s.profile}>
-                <div className={profile ? s.prof : s.profilepage}>
-                    <Profile />
+                <div className={s.profile}>
+                    <span onClick={() => setSubs(prev => !prev)}>
+                        <NotificationsIcon color='error' fontSize='medium' />
+                    </span>
+                    <div className={subs ? s.subscribepage : s.subs}>
+                        <Subscribe />
+                    </div>
+                    <span onClick={() => setProfile(prev => !prev)}>
+                        <AccountCircleIcon color='primary' />
+                    </span>
+                    <div className={profile ? s.prof : s.profilepage}>
+                        <Profile />
+                    </div>
                 </div>
-                <img onClick={() => { setSubs(!subs) }}  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2tdzxQaG4wygq6XM-09Kx4x7aoDwb0GpQ2g&usqp=CAU" alt="" srcset="" />
-                <div className={subs ? s.subscribepage : s.subs}>
-                    <Subscribe />
-                </div>
-                <img onClick={() => { setProfile(!profile) }}  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMSKaWTKHRQ-wTFPBS_kt8WGASXpkRZMLQKw&usqp=CAU" alt="" srcset="" />
             </div>
         </div>
-
     )
 }
 export default Header;

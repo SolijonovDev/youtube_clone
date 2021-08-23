@@ -1,4 +1,4 @@
-[youtube deyloy](https://solijonov.netlify.app)
+[site->](https://solijonov.netlify.app)
 
 **Stack:**
 

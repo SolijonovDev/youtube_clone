@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Recomenduetsya from './Recomenduetsya/Recomenduetsya';
 import Watch from './Watch/Watch';
-import s from './watchVideo.module.css';
+import s from './watchVideo.module.scss';
 import { watchVideoThunk, watchGetVideosThunk } from './../../Redux/actions/watch_videos_reducer';
 import { useParams } from 'react-router-dom';
 

@@ -1,35 +1,28 @@
-.App{
+.app,.ap{
   width:100%;
   box-sizing: border-box;
   margin:0 auto;
   font-size: 14px;
   display: grid;
   grid-template-areas: 'h h' 'n s';
-  grid-template-columns: 200px 1fr;
   grid-template-rows: 45px 1fr;
-  padding:10px;
+  background-color:rgba(6,6,6, .2);
 }
-.Ap{
-  width:100%;
-  box-sizing: border-box;
-  margin:0 auto;
-  font-size: 14px;
-  display: grid;
-  grid-template-areas: 'h h' 'n s';
-  grid-template-columns: 55px 1fr;
-  grid-template-rows: 45px 1fr;
-  padding:10px;
+.app{
+  grid-template-columns: 200px 1fr;
+}
+.ap{
+  grid-template-columns: 90px 1fr; 
 }
  .app-wrapper {
    grid-area: s;
    box-sizing: border-box;
    position:relative;
-   background-color:black;
    padding:15px;
  }
 
  @media screen and (min-width:300px) and (max-width:400px){
-   .App,.Ap{
+   .app,.ap{
      grid-template-columns: 0 1fr;
      padding:5px;
    }
@@ -38,12 +31,12 @@
    }
  }
  @media screen and (min-width:400px) and (max-width:600px){
-  .App{
+  .app{
     grid-template-columns: 120px 1fr;
   }
 }
 @media screen and (min-width:600px) and (max-width:900px){
-  .App{
+  .app{
     grid-template-columns: 150px 1fr;
   }
 }
