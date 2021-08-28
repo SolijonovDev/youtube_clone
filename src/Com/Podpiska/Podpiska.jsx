@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import s from './podpiska.module.css';
+import s from './podpiska.module.scss';
 import Pvideo from './Pvideo';
 import {psGetVideoThunk} from './../../Redux/actions/podpischiki_reducer';
 

@@ -7,7 +7,7 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import MenuIcon from '@material-ui/icons/Menu';
 
-import s from './header.module.css';
+import s from './header.module.scss';
 
 const Header = ({ setNav, nav }) => {
     let [profile, setProfile] = useState(false);

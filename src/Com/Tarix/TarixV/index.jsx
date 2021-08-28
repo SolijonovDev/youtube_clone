@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './tarixv.module.css';
+import s from './tarixv.module.scss';
 import photo from './../../../images/javascript.png';
 import { NavLink } from 'react-router-dom';
 
@@ -7,12 +7,10 @@ const Tarixv=({video:v})=>{
     return (
         <div className={s.video}>
          <NavLink to={'watch/'+v.id} className={s.inner}>
-          <div className={s.img}>
               <img src={v.src||photo} alt="trendy photo" />
-          </div>
           <div className={s.text}>
-              <h2>{v.name}</h2>
-              <p>{v.status}</p>
+              <h2>{v.status}</h2>
+              <h5>{v.channelName}</h5>
           </div>
          </NavLink>
         </div>

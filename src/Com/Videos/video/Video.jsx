@@ -1,7 +1,7 @@
 import React from 'react';
-import s from './video.module.css';
+import s from './video.module.scss';
 import html from '../../../images/react.jpg';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 
@@ -9,17 +9,17 @@ const Video=({video:v})=>{
     return ( 
         <div className={s.video}>
             <div className={s.top}>
-                <NavLink to={'watch/' + v.id} >
+                <Link to={'watch/' + v.id} >
                     <img src={v.src || html} />
-                </NavLink>
+                </Link>
             </div>
             <div className={s.bottom}>
                 <div className={s.left}>
                     <img src={v.photochannel || html} />
                 </div>
                 <div className={s.right}>
-                    <h3>{v.channelName}</h3>
                     <p>{v.status}</p>
+                    <h3>{v.channelName}</h3>
                 </div>
             </div>
         </div >

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Video from './video/Video';
-import s from './videos.module.css';
+import s from './videos.module.scss';
 import {videosThunk} from '../../Redux/actions/videos_reducer';
 
 

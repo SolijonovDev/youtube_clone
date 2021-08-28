@@ -1,0 +1,181 @@
+.header {
+    grid-area: h; 
+    background-color:rgba(80, 80, 80,1);
+    position: fixed;
+    height: 45px;
+    top:0;
+    z-index: 10;
+    right: 0;
+    left: 0;
+    padding:5px 25px;
+    border-bottom: 1px solid black;
+    .inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color:#000;
+        .logos{
+            display: flex;
+            align-items: center;
+            .menu{
+                cursor:pointer;
+            }
+            .logo{
+                display: flex;
+                align-items: center;
+                margin-left: 25px;
+                span{
+                    font-size: 25px;
+                    margin-left: 12px;
+                }
+            }
+            
+        }
+        .search{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 35%;
+            border:1px solid rgba(141, 160, 141, .2);
+             .srch{
+                padding:8px 4px;
+                outline: none;
+                width: 90%;
+                color:black;
+                background-color: transparent;
+                border:none;
+                border:1px solid rgba(20, 113, 235, 0.1);
+                transition: border .5s ease;
+                &:focus{
+                    border:1px solid rgba(20, 113, 235, 0.8);
+                    box-shadow: 2px 4px 12px rgba(7, 52, 110, .8);
+                }
+             }
+             .img{ 
+                width: 10%;
+                padding: 1px 0;  
+                border:1px solid rgba(6, 6, 6, .5);
+                text-align: center;
+                background-color:rgba(60, 209, 214, 0.4);
+            }
+        }
+        .profile {
+            width: 15%;
+            text-align: right;
+            position: relative;
+            cursor:pointer;
+            span{
+                margin-right:30px;
+            }
+            .profilepage{
+                display: none;
+            }
+            .prof{
+                position: absolute;
+                background-color:rgba(80, 80, 80,1);
+                top:0;
+                display: block;
+                right:70%;
+                width: 250px;
+                min-height: 200px;
+            }
+            .subscribepage{
+              position: absolute;
+              background-color: rgba(80, 80, 80,1); 
+              top:0;
+              right:85%;
+              display: block;
+              width: 400px;
+              min-height: 100px;
+            }
+            .subs{
+                display: none;
+            }
+            
+        }
+        
+    }
+}
+@media screen and (min-width:800px){
+    .header{
+.profile {
+    span{
+        margin-right: 15px;
+    }
+  }
+}
+}
+@media screen and (max-width:500px){
+
+}
+
+
+
+
+
+@media screen and (min-width: 300px) {
+    .logos{
+        width: 30%;
+    }
+    .search{
+      width: 40%;
+  }
+  .srch{
+      width: 100px;
+  }
+  .profile {
+    width: 30%;
+}
+.profile img{
+    width: 24px;
+    margin-right: 5px;
+    border-radius: 30px;
+}
+.profilepage{
+    display: none;
+}
+.prof{
+    right:75%;
+    width: 100px;
+}
+.subscribepage{
+  right:90%;
+  width: 150px;
+ }
+}
+
+@media screen and (min-width: 400px) {
+    .logos{
+        width: 25%;
+    }
+    .search{
+      width: 50%;
+  }
+  .srch{
+      width: 80%;
+  }
+.prof{
+    right:65%;
+    width: 250px;
+}
+.subscribepage{
+  right:80%;
+  width: 300px;
+ }
+}
+
+@media screen and (min-width:300px) and (max-width:400px){
+.btn{
+    display: none;
+}
+.menu:after{
+    display: none;
+}
+.menu::before{
+display: none;
+}
+.logos img{
+    margin-left: -25px;
+}
+
+}

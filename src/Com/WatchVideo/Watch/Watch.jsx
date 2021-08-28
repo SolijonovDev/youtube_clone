@@ -17,27 +17,28 @@ const Watch = ({ video: v }) => {
     let [dislayk, setdislayk] = useState(1);
     let [subs, setSubs] = useState(false);
     let [drop, setDrop] = useState(false);
-    const st=NotificationsActiveIcon;
-    let [active, setActive] = useState(0);
-    let arr=[NotificationsActiveIcon,NotificationsNoneOutlinedIcon,NotificationsOffIcon]
+    let [active, setActive] = useState('b');
 
     useEffect(() => {
         setLayk(v.layk)
         setdislayk(v.dislayk)
         setLike(false)
         setdislike(false)
-         setSubs(false);
-       setDrop(false);
+        setActive('b');
+        setSubs(false);
+        setDrop(false);
     }, [v.layk, v.dislayk])
-    const handleClick=(id)=>{
-        setActive(1)
-       setDrop(false);
-      
+    const handleClick = (str) => {
+        setActive(str)
+        setDrop(false);
     }
     const handleSubs = () => {
         setSubs(!subs)
+        if (!subs) {
+            setActive('b');
+        }
     }
-    const handleDrop=()=>{
+    const handleDrop = () => {
         console.log('drop click');
         setDrop(!drop);
     }
@@ -104,22 +105,29 @@ const Watch = ({ video: v }) => {
                             <p>{v.channelName}</p>
                         </div>
                         <div className={s.subscribe}>
-                            <button className={!subs? s.subs :null} onClick={handleSubs}>{subs ? "Bekor qilish":"Obuna bo'lish"}</button>
+                            <button className={!subs ? s.subs : null} onClick={handleSubs}>{subs ? "Bekor qilish" : "Obuna bo'lish"}</button>
                             {subs ? <div onClick={handleDrop}>
-                                <NotificationsNoneOutlinedIcon />
-                            </div>:null}
-                              {drop ?  <div className={s.dropdown}>
-                                    <span onClick={handleClick}>
-                                        <NotificationsActiveIcon /> Hammasi
-                                    </span >
-                                    <span onClick={handleClick}>
-                                        <NotificationsNoneOutlinedIcon /> Saralangani
-                                    </span>
-                                    <span onClick={handleClick}>
-                                        <NotificationsOffIcon /> Hech qanday
-                                    </span>
-                                </div>:null
-}
+                                {
+                                    active === 'a' ?
+                                        <NotificationsActiveIcon color='error' />
+                                        : active === 'b' ?
+                                            <NotificationsNoneOutlinedIcon color='primary' />
+                                            : active === 'c' ?
+                                                <NotificationsOffIcon /> : null
+                                }
+                            </div> : null}
+                            {drop ? <div className={s.dropdown}>
+                                <span onClick={() => handleClick('a')}>
+                                    <NotificationsActiveIcon color='error' /> Hammasi
+                                </span >
+                                <span onClick={() => handleClick('b')}>
+                                    <NotificationsNoneOutlinedIcon color='primary' /> Saralangani
+                                </span>
+                                <span onClick={() => handleClick('c')}>
+                                    <NotificationsOffIcon /> Hech qanday
+                                </span>
+                            </div> : null
+                            }
                         </div>
                     </div>
                     <div className={s.text}>

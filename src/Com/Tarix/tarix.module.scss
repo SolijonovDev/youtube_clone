@@ -1,0 +1,21 @@
+.tarix{
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding:0 10px;
+    .inner{
+        display: flex;
+        .videos{
+            width: 65%;
+            .title {
+                h2{
+                    margin: 30px 0;
+                    color:#fff;
+            }
+          }
+        }
+        .search{
+            width: 35%;
+        }
+    }
+}

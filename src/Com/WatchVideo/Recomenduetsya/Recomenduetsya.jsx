@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './recomenduetsya.module.css';
+import s from './recomenduetsya.module.scss';
 import photo from './../../../images/html.jpg';
 import { Link } from 'react-router-dom';
 

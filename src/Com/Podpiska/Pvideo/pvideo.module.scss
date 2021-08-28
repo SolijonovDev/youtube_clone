@@ -4,25 +4,20 @@
     float: left;
     padding:0 5px;
     box-sizing: border-box;
+    .inner{
+        text-decoration: none;
+        color:black;
+    }
+    img{
+        height: 60%;
+        width: 100%;
+    }
+    .text{
+        width: 100%;
+        height: 40%;
+    }
 }
-.inner{
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    color:papayawhip;
-}
-.img{
-    height: 60%;
-    width: 100%;
-}
-.img img{
-    width: 100%;
-    height: 100%;
-}
-.text{
-    width: 100%;
-    height: 40%;
-}
+
 
 
 @media screen and (min-width:300px) and (max-width:400px){

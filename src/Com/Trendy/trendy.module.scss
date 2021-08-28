@@ -1,0 +1,37 @@
+.trendy{
+    width: 80%;
+    min-height: 800px;
+    padding:0 15px;
+    .ikonki{
+        width: 100%;
+        min-height: 40px;
+        padding: 12px 0;
+        position: fixed;
+        top:25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a{
+            display: block;
+            text-decoration: none;
+            margin:10px;
+            padding: 10px 0;
+            min-width: 200px;
+            text-align: center;
+            color:#fff;
+            background-color: rgba(2,2,2, .8);
+            &.active{
+                color:gold;
+            }
+            &:first-child{
+                margin-right: 0;
+            }
+        }
+        
+    }
+    .video{
+        margin-top: 55px;
+    }
+}
+
+
