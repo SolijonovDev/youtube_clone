@@ -1,0 +1,44 @@
+.profile{
+    width: 100%;
+    height: auto;
+    padding: 10px 15px;
+    .top{
+        margin-bottom: 20px;
+        .image{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 12px;
+            img{
+                width: 40px;
+                padding:4px;
+                border:1px solid blue;
+                border-radius: 50%;
+              }
+        }
+        .name{
+            text-align: center;
+            font-size: 18px;
+            font-weight: 700;
+            font-style: italic;
+        }
+    }
+    .text{
+        width: 100%;
+        line-height: 1.4;
+        text-align: left;
+        color:black;
+        padding-left: 15px;
+        text-transform: uppercase;
+        p{
+            margin-bottom: 12px;
+        }
+        span{
+            margin-right: 15px;
+            color:#fff;
+        }
+    }
+}
+
+
+
+

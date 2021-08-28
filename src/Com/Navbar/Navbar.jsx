@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import s from './navbar.module.css';
+import s from './navbar.module.scss';
 
 import ExploreIcon from '@material-ui/icons/Explore';
 import SubscriptionsIcon from '@material-ui/icons/Subscriptions';
@@ -9,6 +9,7 @@ import VideoLibraryIcon from '@material-ui/icons/VideoLibrary';
 import HistoryIcon from '@material-ui/icons/History';
 
 const Navbar = ({ nav }) => {
+    console.log("Navbar");
     return (
         <div className={nav ? s.items : s.it} >
             <div className={s.item} >

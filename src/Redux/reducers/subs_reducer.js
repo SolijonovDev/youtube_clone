@@ -5,7 +5,7 @@ const initialState={
 videos: [
     {
         id: 1,
-        photo:'',
+        photo:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH43inX9bN4B2cxeler3UcL8kbVp8m3FNyxg&usqp=CAU',
         name: 'Vladilen Minen',
         status: 'html za 1 chas',
     }

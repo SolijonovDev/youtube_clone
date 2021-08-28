@@ -15,20 +15,3 @@
         padding: 0;
     }
 }
-
-@media screen and (min-width:300px) and (max-width:400px){
-    .watchVideo{
-        grid-template-areas:  'w w' 'r r';
-    }
-}
-@media screen and (min-width:400px) and (max-width:900px){
-    .watchVideo{
-        grid-template-areas:  'w w' 'r r';
-    }
-}
-    
-@media screen and (min-width:600px) and (max-width:900px){
-    .watchVideo{
-        grid-template-areas:  'w w' 'r r';
-    }
-}

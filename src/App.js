@@ -6,6 +6,7 @@ import { Header, Navbar, Podpiska, Tarix, Trendy, Videos, WatchVideo } from './C
 
 
 const App = () => {
+  console.log("app");
   let [nav, setNav] = useState(true);
   return (
       <div className={nav ? "app" : "ap"}>
@@ -13,11 +14,11 @@ const App = () => {
         <Navbar nav={nav} />
         <div className='app-wrapper'>
           <Switch>
-            {/* <Route exact path='/videos' render={() => <Videos />} />
+            <Route exact path='/videos' render={() => <Videos />} />
             <Route exact path='/trendy' render={() => <Trendy />} />
             <Route exact path='/podpiska' render={() => <Podpiska />} />
             <Route exact path='/tarix' render={() => <Tarix />} />
-            <Route exact path='/watch/:id?' render={() => <WatchVideo setNav={setNav} />} /> */}
+            <Route exact path='/watch/:id?' render={() => <WatchVideo setNav={setNav} />} />
             <Redirect to='/videos' />
           </Switch>
         </div>

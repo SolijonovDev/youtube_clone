@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import s from './s.module.css';
+import s from './s.module.scss';
 import Svideo from './SubsVideo/Svideo';
 
 const Subscribe=()=>{

@@ -20,23 +20,3 @@
    position:relative;
    padding:15px;
  }
-
- @media screen and (min-width:300px) and (max-width:400px){
-   .app,.ap{
-     grid-template-columns: 0 1fr;
-     padding:5px;
-   }
-   .app-wrapper{
-     padding:0;
-   }
- }
- @media screen and (min-width:400px) and (max-width:600px){
-  .app{
-    grid-template-columns: 120px 1fr;
-  }
-}
-@media screen and (min-width:600px) and (max-width:900px){
-  .app{
-    grid-template-columns: 150px 1fr;
-  }
-}

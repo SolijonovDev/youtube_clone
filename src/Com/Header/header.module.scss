@@ -61,12 +61,10 @@
         }
         .profile {
             width: 15%;
-            text-align: right;
+            display: flex;
+            justify-content: space-between;
             position: relative;
             cursor:pointer;
-            span{
-                margin-right:30px;
-            }
             .profilepage{
                 display: none;
             }
@@ -83,7 +81,7 @@
               position: absolute;
               background-color: rgba(80, 80, 80,1); 
               top:0;
-              right:85%;
+              right:100%;
               display: block;
               width: 400px;
               min-height: 100px;
@@ -91,91 +89,7 @@
             .subs{
                 display: none;
             }
-            
         }
         
     }
-}
-@media screen and (min-width:800px){
-    .header{
-.profile {
-    span{
-        margin-right: 15px;
-    }
-  }
-}
-}
-@media screen and (max-width:500px){
-
-}
-
-
-
-
-
-@media screen and (min-width: 300px) {
-    .logos{
-        width: 30%;
-    }
-    .search{
-      width: 40%;
-  }
-  .srch{
-      width: 100px;
-  }
-  .profile {
-    width: 30%;
-}
-.profile img{
-    width: 24px;
-    margin-right: 5px;
-    border-radius: 30px;
-}
-.profilepage{
-    display: none;
-}
-.prof{
-    right:75%;
-    width: 100px;
-}
-.subscribepage{
-  right:90%;
-  width: 150px;
- }
-}
-
-@media screen and (min-width: 400px) {
-    .logos{
-        width: 25%;
-    }
-    .search{
-      width: 50%;
-  }
-  .srch{
-      width: 80%;
-  }
-.prof{
-    right:65%;
-    width: 250px;
-}
-.subscribepage{
-  right:80%;
-  width: 300px;
- }
-}
-
-@media screen and (min-width:300px) and (max-width:400px){
-.btn{
-    display: none;
-}
-.menu:after{
-    display: none;
-}
-.menu::before{
-display: none;
-}
-.logos img{
-    margin-left: -25px;
-}
-
 }

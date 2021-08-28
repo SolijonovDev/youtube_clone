@@ -4,7 +4,7 @@ import photo from './../../../images/mern.jpg';
 import { Link } from 'react-router-dom';
 
 const Pvideo = ({video:v}) => {
-    debugger
+    console.log('Podpiska item');
     return (
         <div className={s.video}>
             <Link to={'/watch/'+v.id} className={s.inner}>

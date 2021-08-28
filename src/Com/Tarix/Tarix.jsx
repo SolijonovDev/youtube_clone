@@ -5,7 +5,6 @@ import s from './tarix.module.scss'
 import Tarixv from './TarixV'
 
 const Tarix = () => {
-
     const { videos } = useSelector(state => state.trendy);
 
     let video = videos.map(s => <Tarixv video={s} />);

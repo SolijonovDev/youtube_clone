@@ -5,6 +5,7 @@ import Pvideo from './Pvideo';
 import {psGetVideoThunk} from './../../Redux/actions/podpischiki_reducer';
 
 const Podpiska=()=>{
+    console.log("Podpiska");
     const dispatch=useDispatch();
     const {videos}=useSelector(state=>state.podpiska);
     
